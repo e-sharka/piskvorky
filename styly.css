@@ -30,23 +30,54 @@ h1 {
   height: auto;
   padding-left: 40px;
   padding-right: 40px;
-
   text-align: center;
   line-height: 1.5;
-  display: flex;
   justify-content: center;
   flex-direction: column;
 }
 .prvni {
   background-color: #1fcca4;
-  color: white;
   font-family: sans-serif;
   font-size: 1rem;
   width: auto;
-  height: auto;
-  padding-left: 40px;
+  height: 40px;
+  /*padding-left: 40px;
   padding-right: 40px;
+  padding-top: 20px;*/
   text-align: center;
   display: flex;
   justify-content: center;
+}
+.druhy {
+  background-color: #0197f6;
+  font-family: sans-serif;
+  font-size: 1rem;
+  width: auto;
+  height: 40px;
+  /*padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;*/
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+  /*height: 40px;
+  width: 650px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+}
+.prvni a:hover {
+  background-color: #1cbb96;
+  display: flex;
+
+  /*justify-content: center;
+  align-items: center;*/
+}
+.druhy a:hover {
+  background-color: #0090e9;
 }
