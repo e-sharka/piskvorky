@@ -1,3 +1,4 @@
+*,
 :after,
 :before {
   box-sizing: border-box;
@@ -5,15 +6,13 @@
 
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
-  margin: 0;
-  padding: 100px 100px;
-  /*text-align: center;*/
+  padding: 65px 65px;
   display: flex;
   justify-content: center;
 }
 
 .uvodni {
-  width: 450px;
+  width: 360px;
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
 }
@@ -21,16 +20,10 @@ body {
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
 .kontejner {
   display: flex;
-  /*padding-left: 300px;
-  /*padding-right: 300px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding: 100px 300px;*/
   justify-content: center;
   flex-direction: column;
 }
@@ -40,15 +33,11 @@ h1 {
   color: white;
   font-family: sans-serif;
   font-size: 1rem;
-  width: 350px;
+  width: 360px;
   height: auto;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 10px 20px 10px;
   text-align: center;
   line-height: 1.5;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center;*/
 }
 
 .prvni {
@@ -56,44 +45,36 @@ h1 {
   font-family: sans-serif;
   font-size: 1rem;
   width: auto;
-  height: 40px;
-  /*padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 20px;*/
+  height: 50px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
+
 .druhy {
   background-color: #0197f6;
   font-family: sans-serif;
   font-size: 1rem;
   width: auto;
-  height: 40px;
-  /*padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 20px;*/
+  height: 50px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
+
 a {
   text-decoration: none;
   color: white;
-  /*height: 40px;
-  width: 650px;*/
   display: flex;
   justify-content: center;
   align-items: center;
   flex-basis: 100%;
 }
+
 .prvni a:hover {
   background-color: #1cbb96;
-  display: flex;
-
-  /*justify-content: center;
-  align-items: center;*/
 }
+
 .druhy a:hover {
   background-color: #0090e9;
 }
