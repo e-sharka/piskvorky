@@ -20,6 +20,7 @@ body {
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 3rem;
+  font-weight: 500;
 }
 
 .kontejner {
@@ -31,7 +32,7 @@ h1 {
 .main {
   background-color: #283e50;
   color: white;
-  font-family: sans-serif;
+  font-family: Arial;
   font-size: 1rem;
   width: 360px;
   height: auto;
@@ -40,7 +41,7 @@ h1 {
   line-height: 1.5;
 }
 
-.prvni {
+.button-pravidla {
   background-color: #1fcca4;
   font-family: sans-serif;
   font-size: 1rem;
@@ -51,18 +52,17 @@ h1 {
   justify-content: center;
 }
 
-.druhy {
+.button-start {
   background-color: #0197f6;
   font-family: sans-serif;
   font-size: 1rem;
-  width: auto;
   height: 50px;
-  text-align: center;
   display: flex;
   justify-content: center;
 }
 
-a {
+.odkaz-pravidla,
+.odkaz-start {
   text-decoration: none;
   color: white;
   display: flex;
@@ -71,10 +71,10 @@ a {
   flex-basis: 100%;
 }
 
-.prvni a:hover {
+.odkaz-pravidla:hover {
   background-color: #1cbb96;
 }
 
-.druhy a:hover {
+.odkaz-start:hover {
   background-color: #0090e9;
 }
