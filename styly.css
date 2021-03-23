@@ -9,6 +9,7 @@ body {
   padding: 65px 65px;
   display: flex;
   justify-content: center;
+  min-height: 100%;
 }
 
 .uvodni {
