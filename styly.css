@@ -30,7 +30,19 @@ h1 {
   flex-direction: column;
 }
 
-.main {
+.main-home {
+  background-color: #283e50;
+  color: white;
+  font-family: Arial;
+  font-size: 1rem;
+  width: 360px;
+  height: auto;
+  padding: 0 10px 20px 10px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.main-pravidla {
   background-color: #283e50;
   color: white;
   font-family: Arial;
@@ -53,6 +65,17 @@ h1 {
   justify-content: center;
 }
 
+.button-home {
+  background-color: #1fcca4;
+  font-family: sans-serif;
+  font-size: 1rem;
+  width: auto;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
 .button-start {
   background-color: #0197f6;
   font-family: sans-serif;
@@ -63,7 +86,8 @@ h1 {
 }
 
 .odkaz-pravidla,
-.odkaz-start {
+.odkaz-start,
+.odkaz-home {
   text-decoration: none;
   color: white;
   display: flex;
@@ -72,7 +96,8 @@ h1 {
   flex-basis: 100%;
 }
 
-.odkaz-pravidla:hover {
+.odkaz-pravidla:hover,
+.odkaz-home:hover {
   background-color: #1cbb96;
 }
 
