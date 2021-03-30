@@ -18,10 +18,22 @@ body {
   border-top-right-radius: 2%;
 }
 
-h1 {
+h1,
+.h1-pravidla {
   font-family: 'Lobster', cursive;
   font-size: 3rem;
   font-weight: 500;
+}
+
+.h1-pravidla {
+  text-align: center;
+}
+
+.ikona-cross,
+.ikona-circle {
+  width: 1em;
+  height: 1em;
+  filter: invert(100%);
 }
 
 .kontejner {
@@ -47,11 +59,22 @@ h1 {
   color: white;
   font-family: Arial;
   font-size: 1rem;
+  font-weight: 500;
   width: 360px;
   height: auto;
   padding: 0 10px 20px 10px;
-  text-align: center;
+  /*text-align: center;*/
   line-height: 1.5;
+}
+.list-pravidla {
+  text-align: left;
+  line-height: 1;
+}
+
+li {
+  padding: 10px;
+  margin-left: 40px;
+  margin-right: 10px;
 }
 
 .button-pravidla {
