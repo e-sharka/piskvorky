@@ -6,7 +6,7 @@
 
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
-  padding: 65px 65px;
+  padding: 65px 0 65px 0;
   display: flex;
   justify-content: center;
   min-height: 100%;
@@ -60,11 +60,17 @@ h1,
   font-family: Arial;
   font-size: 1rem;
   font-weight: 100;
-  width: 360px;
-  height: auto;
-  /*padding: 0 10px 20px 10px;
+  width: 100%;
+  min-width: 348px;
+  max-width: 800px;
+
+  /*height: auto;
+  margin: 0 auto;
+  padding: 0 10px 20px 10px;
   text-align: center;*/
   line-height: 1.5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .list-pravidla {
@@ -78,19 +84,56 @@ li {
   margin-left: 30px;
   margin-right: 10px;
 }
+
+/*.img-kontejner {
+  display: flex;
+  flex-direction: column;
+
+  
+}*/
+
 .img-blok {
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 100%;
+  /*display: flex;
+  flex-direction: column;*/
 }
 
 .img-pravidla {
-  width: 290px;
-  padding-right: 10px;
+  /*padding-right: 10px;
+  width: ;*/
+  max-width: 290px;
+  /*width: 100%;*/
 }
 
 .popisek-pravidla {
   font-style: italic;
   text-align: center;
+  max-width: 280px;
+  /*max-width: 100%;*/
+}
+
+@media (min-width: 800px) {
+  .img-kontejner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*padding: 0 0 0 80px;*/
+  }
+
+  .img-blok {
+    width: 50%;
+    margin: 0;
+    padding-left: 60px;
+  }
+
+  /*img-pravidla {
+    width: 50%;
+  }
+  .popisek-pravidla {
+    width: 50%;
+  }*/
 }
 
 .button-pravidla {
