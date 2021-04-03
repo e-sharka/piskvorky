@@ -4,17 +4,20 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
   padding: 65px 0 65px 0;
   display: flex;
   justify-content: center;
-  min-height: 100%;
   background-repeat: no-repeat;
 }
 
 .uvodni {
-  width: 360px;
+  width: 100%;
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
 }
@@ -35,6 +38,7 @@ h1,
   width: 1em;
   height: 1em;
   filter: invert(100%);
+  vertical-align: -0.1em;
 }
 
 .kontejner {
@@ -48,7 +52,8 @@ h1,
   color: white;
   font-family: Arial;
   font-size: 1rem;
-  width: 360px;
+  width: 100%;
+  max-width: 640px;
   height: auto;
   padding: 0 10px 20px 10px;
   text-align: center;
@@ -62,7 +67,7 @@ h1,
   font-size: 1rem;
   font-weight: 100;
   width: 100%;
-  max-width: 800px;
+  max-width: 640px;
   line-height: 1.5;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -75,6 +80,7 @@ h1,
 }
 
 li {
+  line-height: 1.5;
   padding: 10px;
   margin-left: 30px;
   margin-right: 10px;
@@ -99,6 +105,7 @@ li {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .img-blok {
