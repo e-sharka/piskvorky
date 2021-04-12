@@ -16,14 +16,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.body-hra {
-  background-image: linear-gradient(#615dad, #ffc8da);
-  padding: 30px 0 30px 0;
-  display: flex;
-  justify-content: center;
-  background-repeat: no-repeat;
-}
-
 .uvodni {
   width: 100%;
   border-top-left-radius: 2%;
@@ -84,22 +76,35 @@ h1,
   border-top-right-radius: 10px;
 }
 
+/* ----- Stránka Hra ----- */
+.body-hra {
+  background-image: linear-gradient(#615dad, #ffc8da);
+  padding: 30px 0 0 0;
+  /*display: flex;
+  justify-content: center;*/
+  background-repeat: no-repeat;
+}
 .main-hra {
   color: white;
   font-family: Arial;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   width: 100%;
-  max-width: 640px;
+  /*max-width: 640px;*/
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px 0 30px;
 }
 
 .lista {
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
 }
 
 .hraje {
-  margin-top: 10px;
+  margin-top: 15px;
+  width: 100%;
 }
 
 .hraje-text {
@@ -107,10 +112,110 @@ h1,
   margin-bottom: 0;
 }
 
-.buttony-hra {
+.ikony-hra {
   display: flex;
 }
 
+.hraci-pole {
+  display: flex;
+  flex-direction: column;
+  border: black solid 1px;
+}
+
+.prvni-radek,
+.druhy-radek,
+.treti-radek,
+.ctvrty-radek,
+.paty-radek,
+.sesty-radek,
+.sedmy-radek,
+.osmy-radek,
+.devaty-radek,
+.desaty-radek {
+  display: flex;
+  /*justify-content: center;*/
+}
+
+.hraci-pole__btn {
+  opacity: 0.5;
+  min-width: 25px;
+  min-height: 25px;
+  border: black solid 1px;
+  width: 100%;
+  padding: 0;
+}
+
+.hraci-pole__btn:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+
+.ikona-restart {
+  background-color: #0197f6;
+  /*font-family: sans-serif;
+  font-size: 1rem;*/
+  width: auto;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 12px 10px 10px;
+}
+
+.ikona-restart__odkaz {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+.ikona-restart:hover {
+  background-color: #0090e9;
+  /*border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;*/
+}
+
+.ikona-home {
+  background-color: #1fcca4;
+  /*font-family: sans-serif;
+  font-size: 1rem;*/
+  /*width: auto;*/
+  padding: 10px;
+  width: auto;
+  height: 50px;
+  /*text-align: center;*/
+  display: flex;
+  justify-content: center;
+}
+
+.ikona-home__odkaz {
+  /*background-color: #1fcca4;*/
+  border-radius: 5px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  /*width: 50px;
+  height: 50px;
+  margin-right: 10px;*/
+}
+
+.ikona-home:hover {
+  background-color: #1cbb96;
+}
+
+.ikona-restart,
+.ikona-home {
+  border-radius: 5px;
+}
+
+/* ----- Stránka Pravidla ----- */
 .list-pravidla {
   text-align: left;
   line-height: 1;
@@ -154,6 +259,8 @@ li {
   }
 }
 
+/* ----- Obecná nastavení ----- */
+
 .button-pravidla {
   background-color: #1fcca4;
   font-family: sans-serif;
@@ -183,31 +290,6 @@ li {
   height: 50px;
   display: flex;
   justify-content: center;
-}
-
-.ikona-restart {
-  background-color: #0197f6;
-  font-family: sans-serif;
-  font-size: 1rem;
-  height: 50px;
-  padding: 10px 12px 10px 10px;
-}
-.ikona-home {
-  background-color: #1fcca4;
-  font-family: sans-serif;
-  font-size: 1rem;
-  width: auto;
-  height: 50px;
-  margin-right: 10px;
-  padding: 10px;
-  /*text-align: center;
-  display: flex;
-  justify-content: center;*/
-}
-
-.ikona-restart,
-.ikona-home {
-  border-radius: 5px;
 }
 
 .odkaz-pravidla,
