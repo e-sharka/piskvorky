@@ -40,8 +40,7 @@ h1,
 .ikona-circle {
   width: 1em;
   height: 1em;
-  filter: invert(200%);
-
+  filter: invert(100%);
   vertical-align: -0.1em;
 }
 
@@ -115,7 +114,8 @@ h1,
 }
 
 .hraci-pole__btn {
-  opacity: 0.5;
+  /*opacity: 0.5;*/
+  background-color: #f1d5efbe;
   border: black solid 1px;
   padding: 0;
   width: calc(80vmin / 10);
@@ -134,7 +134,7 @@ h1,
 
 .hraci-pole__btn:active {
   border: 1px solid black;
-  box-shadow: 5px 10px 18px black;
+  box-shadow: 0.5px 0.5px 2px 2px black, -0.5px -0.5px 2px 2px white;
 }
 
 .ikona-restart {
@@ -187,18 +187,40 @@ h1,
 
 .board__field--circle {
   background-image: url('obrazky/circle.svg');
-  background-size: 2.5rem;
+  background-size: 2rem;
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: none;
+  animation-name: gradual-growth;
+  animation-duration: 0.15s;
+}
+
+@keyframes gradual-growth {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 65%;
+  }
 }
 
 .board__field--cross {
   background-image: url('obrazky/cross.svg');
-  background-size: 2.5rem;
+  background-size: 2rem;
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: none;
+  animation-name: gradual-growth;
+  animation-duration: 0.15s;
+}
+
+@keyframes gradual-growth {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 65%;
+  }
 }
 
 /* ----- Stránka Pravidla ----- */
