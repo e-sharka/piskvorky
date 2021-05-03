@@ -13,5 +13,108 @@ document.querySelectorAll('.hraci-pole__btn').forEach((btn) => {
       document.querySelector('.ikona-hrac').src = 'obrazky/circle.svg';
       kdoJeNaTahu = 'circle';
     }
-  });
+    console.log(getPosition(btn));
+    const pozice = getPosition(btn);
+    console.log(getField(pozice.row, pozice.column));
+    const pole = getField(pozice.row, pozice.column);
+    console.log(getSymbol(pole));
+    /*const symbol = getSymbol(pole);*/
+    console.log(isWinningMove(pole));
+
+    if (isWinningMove(pole) === true) {
+      setTimeout(function() { 
+      let result;
+      if (getSymbol(pole) === 'circle') {
+        /*return confirm('Vyhrál kroužek');*/
+        result = confirm('Vyhrál kroužek');
+        if (result === true) {
+          location.reload();
+        }
+      } else {
+        result = confirm('Vyhrál křížek');
+        if (result === true) {
+          location.reload();
+        }
+      } /*else return confirm('Vyhrál křížek')*/
+    }, 500);
+  };
 });
+});
+
+/*zjistí, jestli je pět políček stejného symbolu vedle sebe*/
+const symbolsToWin = 5;
+
+const isWinningMove = (field) => {
+  const origin = getPosition(field);
+  const symbol = getSymbol(field);
+  let i;
+  let inRow = 1;
+
+  /*doleva*/
+  i = origin.column;
+  while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
+    inRow += 1;
+    i -= 1;
+  }
+  /*doprava*/
+  i = origin.column;
+  while (
+    i < boardSize - 1 &&
+    symbol === getSymbol(getField(origin.row, i + 1))
+  ) {
+    inRow += 1;
+    i += 1;
+  }
+  if (inRow >= symbolsToWin) {
+    return true;
+  }
+
+  let inColumn = 1;
+  /*nahoru*/
+  i = origin.row;
+  while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
+    inColumn += 1;
+    i -= 1;
+  }
+  /*dolu*/
+  i = origin.row;
+  while (
+    i < boardSize - 1 &&
+    symbol === getSymbol(getField(i + 1, origin.column))
+  ) {
+    inColumn += 1;
+    i += 1;
+  }
+  if (inColumn >= symbolsToWin) {
+    return true;
+  }
+  return false;
+};
+
+/*zjistí, jaký symbol je na políčku*/
+const getSymbol = (btn) => {
+  if (btn.classList.contains('board__field--cross')) {
+    return 'cross';
+  } else if (btn.classList.contains('board__field--circle')) {
+    return 'circle';
+  }
+};
+
+/*najde hrací políčko na základě souřadnic*/
+const boardSize = 10;
+const fields = document.querySelectorAll('.hraci-pole__btn');
+const getField = (row, column) => {
+  return fields[row * boardSize + column];
+};
+
+/*pro dané políčko vrátí objekt, ve kterém bude řada a sloupec, kam byl umístěn symbol*/
+const getPosition = (field) => {
+  let fieldIndex = 0;
+  while (fieldIndex < fields.length && field !== fields[fieldIndex]) {
+    fieldIndex++;
+  }
+  return {
+    row: Math.floor(fieldIndex / boardSize),
+    column: fieldIndex % boardSize,
+  };
+};
