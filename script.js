@@ -13,12 +13,10 @@ document.querySelectorAll('.hraci-pole__btn').forEach((btn) => {
       document.querySelector('.ikona-hrac').src = 'obrazky/circle.svg';
       kdoJeNaTahu = 'circle';
     }
-    console.log(getPosition(btn));
+
     const pozice = getPosition(btn);
-    console.log(getField(pozice.row, pozice.column));
+
     const pole = getField(pozice.row, pozice.column);
-    console.log(getSymbol(pole));
-    console.log(isWinningMove(pole));
 
     if (isWinningMove(pole) === true) {
       setTimeout(function () {
@@ -84,7 +82,6 @@ const isWinningMove = (field) => {
   i = origin.row;
   j = origin.column;
   while (
-    /*i > 0 && j > 0 && */
     i > 0 &&
     j < boardSize - 1 &&
     symbol === getSymbol(getField(i - 1, j + 1))
