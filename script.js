@@ -34,7 +34,7 @@ document.querySelectorAll('.hraci-pole__btn').forEach((btn) => {
             location.reload();
           }
         }
-      }, 500);
+      }, 400);
     }
   });
 });
@@ -62,7 +62,7 @@ const isWinningMove = (field) => {
     return true;
   }
 
-  /*diagonálně doprava dolů ok*/
+  /*diagonálně doprava dolů*/
   i = origin.row;
   j = origin.column;
   while (
@@ -90,6 +90,7 @@ const isWinningMove = (field) => {
   if (inDiag >= symbolsToWin) {
     return true;
   }
+
   /*diagonálně doleva dolů*/
   i = origin.row;
   j = origin.column;
