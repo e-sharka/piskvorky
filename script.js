@@ -49,6 +49,7 @@ const isWinningMove = (field) => {
   let j;
   let inRow = 1;
   let inDiag = 1;
+  let inDiagB = 1;
 
   /*diagonálně doleva nahoru*/
   i = origin.row;
@@ -82,29 +83,35 @@ const isWinningMove = (field) => {
   /*diagonálně doprava nahoru*/
   i = origin.row;
   j = origin.column;
-  while (i > 0 && j > 0 && symbol === getSymbol(getField(i - 1, j + 1))) {
-    inDiag += 1;
+  while (
+    /*i > 0 && j > 0 && */
+    i > 0 &&
+    j < boardSize - 1 &&
+    symbol === getSymbol(getField(i - 1, j + 1))
+  ) {
+    inDiagB += 1;
     i -= 1;
     j += 1;
   }
-  if (inDiag >= symbolsToWin) {
+  if (inDiagB >= symbolsToWin) {
     return true;
   }
 
   /*diagonálně doleva dolů*/
   i = origin.row;
   j = origin.column;
+
   while (
     i < boardSize - 1 &&
-    j < boardSize - 1 &&
+    j > 0 &&
     symbol === getSymbol(getField(i + 1, j - 1))
   ) {
-    inDiag += 1;
+    inDiagB += 1;
     i += 1;
     j -= 1;
   }
 
-  if (inDiag >= symbolsToWin) {
+  if (inDiagB >= symbolsToWin) {
     return true;
   }
 
